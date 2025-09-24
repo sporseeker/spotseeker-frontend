@@ -1,0 +1,301 @@
+{
+  "events": [
+    {
+      "id": "cosmic-music-fest",
+      "name": "Cosmic Music Fest",
+      "date": "2024-11-10T19:00:00+0000",
+      "venue": "Colombo Racecourse Grounds",
+      "locationLink": "https://goo.gl/maps/XYZ123",
+      "image": "1.png",
+      "trailerLink": "https://www.youtube.com/watch?v=xyz123",
+      "by": "DJ Nexus",
+      "description": "Get ready to experience an electrifying night filled with the best of electronic dance music at the Cosmic Music Fest! Set in the heart of Colombo, this festival brings together top international and local DJs, mesmerizing light shows, and an unforgettable atmosphere. From house music to techno, the beats won't stop as the crowd dances under the stars.",
+      "tickets": [
+        {
+          "id": "tier-1",
+          "name": "Early Bird",
+          "price": 5000,
+          "currency": "LKR",
+          "availableQuantity": 100
+        },
+        {
+          "id": "tier-2",
+          "name": "General Admission",
+          "price": 6000,
+          "currency": "LKR",
+          "availableQuantity": 50
+        },
+        {
+          "id": "tier-3",
+          "name": "VIP",
+          "price": 9000,
+          "currency": "LKR",
+          "availableQuantity": 0
+        }
+      ]
+    },
+    {
+      "id": "serene-symphonies",
+      "name": "Serene Symphonies",
+      "date": "2024-12-01T17:00:00+0000",
+      "venue": "Nelum Pokuna Theatre",
+      "locationLink": "https://goo.gl/maps/ABC789",
+      "image": "2.png",
+      "trailerLink": "https://www.youtube.com/watch?v=abc789",
+      "by": "Symphony Orchestra of Sri Lanka",
+      "description": "Immerse yourself in a world of classical music at Serene Symphonies, a night dedicated to timeless masterpieces performed by the renowned Symphony Orchestra of Sri Lanka. The concert will take you on a journey through Beethoven’s greatest works, accompanied by an incredible choir and solo performances that will leave you breathless.",
+      "tickets": [
+        {
+          "id": "tier-1",
+          "name": "Balcony",
+          "price": 3000,
+          "currency": "LKR",
+          "availableQuantity": 120
+        },
+        {
+          "id": "tier-2",
+          "name": "Orchestra",
+          "price": 4000,
+          "currency": "LKR",
+          "availableQuantity": 80
+        },
+        {
+          "id": "tier-3",
+          "name": "VIP",
+          "price": 7000,
+          "currency": "LKR",
+          "availableQuantity": 0
+        }
+      ]
+    },
+    {
+      "id": "urban-food-festival",
+      "name": "Urban Food Festival",
+      "date": "2024-10-15T11:00:00+0000",
+      "venue": "Independence Square",
+      "locationLink": "https://goo.gl/maps/XYZ999",
+      "image": "3.png",
+      "trailerLink": "https://www.youtube.com/watch?v=xyz999",
+      "by": "Sri Lanka Culinary Association",
+      "description": "Join us at the Urban Food Festival, where the best local street food vendors and international cuisines come together. Enjoy a day full of delicious bites, live cooking demos, food trucks, and interactive workshops led by top chefs. Whether you're a foodie or just looking to try something new, this festival offers something for everyone.",
+      "tickets": [
+        {
+          "id": "tier-1",
+          "name": "Standard Entry",
+          "price": 1500,
+          "currency": "LKR",
+          "availableQuantity": 300
+        },
+        {
+          "id": "tier-2",
+          "name": "VIP Pass",
+          "price": 2500,
+          "currency": "LKR",
+          "availableQuantity": 0
+        }
+      ]
+    },
+    {
+      "id": "island-reggae-night",
+      "name": "Island Reggae Night",
+      "date": "2024-12-10T19:00:00+0000",
+      "venue": "Galle Face Green",
+      "locationLink": "https://goo.gl/maps/DEF456",
+      "image": "4.png",
+      "trailerLink": "https://www.youtube.com/watch?v=def456",
+      "by": "Island Vibes Collective",
+      "description": "Feel the rhythm of the island at Reggae Night, where laid-back tunes and beach vibes come alive. Featuring local reggae bands and special international guest artists, this event is perfect for anyone looking to unwind and enjoy some smooth beats by the sea. Come prepared for a night of fun, dancing, and good vibes.",
+      "tickets": [
+        {
+          "id": "tier-1",
+          "name": "Standard",
+          "price": 4500,
+          "currency": "LKR",
+          "availableQuantity": 150
+        },
+        {
+          "id": "tier-2",
+          "name": "VIP",
+          "price": 6000,
+          "currency": "LKR",
+          "availableQuantity": 0
+        }
+      ]
+    },
+    {
+      "id": "outdoor-film-festival",
+      "name": "Outdoor Film Festival",
+      "date": "2024-11-24T18:00:00+0000",
+      "venue": "Viharamahadevi Park",
+      "locationLink": "https://goo.gl/maps/JKL654",
+      "image": "5.png",
+      "trailerLink": "https://www.youtube.com/watch?v=jkl654",
+      "by": "Cine Club",
+      "description": "Experience cinema like never before at the Outdoor Film Festival. Featuring a curated selection of local and international films, this event promises a memorable night under the stars. Bring a blanket, grab some popcorn, and relax as you enjoy the latest award-winning films on a giant outdoor screen.",
+      "tickets": [
+        {
+          "id": "tier-1",
+          "name": "General Admission",
+          "price": 2000,
+          "currency": "LKR",
+          "availableQuantity": 200
+        },
+        {
+          "id": "tier-2",
+          "name": "VIP Lounges",
+          "price": 3500,
+          "currency": "LKR",
+          "availableQuantity": 0
+        }
+      ]
+    },
+    {
+      "id": "rooftop-jazz-night",
+      "name": "Rooftop Jazz Night",
+      "date": "2024-10-29T19:30:00+0000",
+      "venue": "Colombo City Hotel Rooftop",
+      "locationLink": "https://goo.gl/maps/MNO321",
+      "image": "6.png",
+      "trailerLink": "https://www.youtube.com/watch?v=mno321",
+      "by": "Jazz Collective",
+      "description": "Join us for an intimate night of live jazz music under the stars at the Rooftop Jazz Night. Featuring performances by the city's top jazz musicians, this event is perfect for anyone who loves smooth rhythms, live instrumentation, and a cozy rooftop atmosphere.",
+      "tickets": [
+        {
+          "id": "tier-1",
+          "name": "General Admission",
+          "price": 4000,
+          "currency": "LKR",
+          "availableQuantity": 75
+        },
+        {
+          "id": "tier-2",
+          "name": "VIP Table",
+          "price": 6500,
+          "currency": "LKR",
+          "availableQuantity": 10
+        }
+      ]
+    },
+    {
+      "id": "cultural-carnival",
+      "name": "Cultural Carnival",
+      "date": "2024-10-02T09:00:00+0000",
+      "venue": "Kandy Lake Park",
+      "locationLink": "https://goo.gl/maps/OPQ789",
+      "image": "7.png",
+      "trailerLink": "https://www.youtube.com/watch?v=opq789",
+      "by": "Kandy Cultural Foundation",
+      "description": "Step into a world of color and excitement at the Cultural Carnival! This event celebrates the rich heritage of Sri Lanka with traditional dances, folk music, and a parade showcasing the island's diverse cultures. With food stalls, craft exhibitions, and fun activities for kids, it's an event for the whole family.",
+      "tickets": [
+        {
+          "id": "tier-1",
+          "name": "General Entry",
+          "price": 1000,
+          "currency": "LKR",
+          "availableQuantity": 500
+        },
+        {
+          "id": "tier-2",
+          "name": "VIP Experience",
+          "price": 2000,
+          "currency": "LKR",
+          "availableQuantity": 50
+        }
+      ]
+    },
+    {
+      "id": "wellness-retreat",
+      "name": "Wellness Retreat",
+      "date": "2024-12-15T09:00:00+0000",
+      "venue": "Serenity Eco Resort",
+      "locationLink": "https://goo.gl/maps/XYZ1234",
+      "image": "8.png",
+      "trailerLink": "https://www.youtube.com/watch?v=xyz1234",
+      "by": "Wellness Institute",
+      "description": "Rejuvenate your mind, body, and soul at our Wellness Retreat, where you'll experience yoga, meditation, and holistic healing practices. Enjoy nutritious meals, nature walks, and workshops led by expert wellness coaches in a peaceful setting.",
+      "tickets": [
+        {
+          "id": "tier-1",
+          "name": "Full Retreat Package",
+          "price": 12000,
+          "currency": "LKR",
+          "availableQuantity": 30
+        }
+      ]
+    },
+    {
+      "id": "sports-festival",
+      "name": "Sports Festival",
+      "date": "2024-11-05T10:00:00+0000",
+      "venue": "Sri Lanka Sports Complex",
+      "locationLink": "https://goo.gl/maps/LMN234",
+      "image": "9.png",
+      "trailerLink": "https://www.youtube.com/watch?v=lmn234",
+      "by": "Sri Lanka Sports Council",
+      "description": "Join us for a day of fun and fitness at the Sports Festival! Participate in various sports activities, games, and competitions. Suitable for all ages, this event aims to promote health and wellness in our community.",
+      "tickets": [
+        {
+          "id": "tier-1",
+          "name": "Participation",
+          "price": 0,
+          "currency": "LKR",
+          "availableQuantity": 1000
+        }
+      ]
+    },
+    {
+      "id": "art-expo",
+      "name": "Art Expo",
+      "date": "2024-10-12T10:00:00+0000",
+      "venue": "Colombo Art Gallery",
+      "locationLink": "https://goo.gl/maps/STU345",
+      "image": "10.png",
+      "trailerLink": "https://www.youtube.com/watch?v=stu345",
+      "by": "Colombo Art Society",
+      "description": "Explore the creative world of local artists at the Art Expo! Featuring a diverse range of artwork, live painting demonstrations, and interactive art sessions, this event is a perfect opportunity to immerse yourself in the vibrant art scene of Colombo.",
+      "tickets": [
+        {
+          "id": "tier-1",
+          "name": "General Admission",
+          "price": 1500,
+          "currency": "LKR",
+          "availableQuantity": 200
+        },
+        {
+          "id": "tier-2",
+          "name": "VIP Access",
+          "price": 2500,
+          "currency": "LKR",
+          "availableQuantity": 0
+        }
+      ]
+    },
+    {
+      "id": "comedy-night",
+      "name": "Comedy Night",
+      "date": "2024-11-20T20:00:00+0000",
+      "venue": "Liberty Cinema Hall",
+      "locationLink": "https://goo.gl/maps/VWX456",
+      "image": "11.png",
+      "trailerLink": "https://www.youtube.com/watch?v=vwx456",
+      "by": "Laugh Out Loud",
+      "description": "Get ready to laugh your heart out at Comedy Night, featuring some of the best stand-up comedians from around the country. Enjoy a night filled with humor, fun, and unforgettable performances that will leave you in stitches.",
+      "tickets": [
+        {
+          "id": "tier-1",
+          "name": "Standard Entry",
+          "price": 3500,
+          "currency": "LKR",
+          "availableQuantity": 100
+        },
+        {
+          "id": "tier-2",
+          "name": "VIP Seating",
+          "price": 5000,
+          "currency": "LKR",
+          "availableQuantity": 0
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+export type IProfile = {
+  id: number;
+  name: string;
+  email: string;
+  email_verified_at: string | null;
+  current_team_id: number | null;
+  profile_photo_path: string;
+  created_at: string;
+  updated_at: string;
+  first_name: string;
+  last_name: string;
+  phone_no: string;
+  mobile_verified_at: string | null;
+  address_line_one: string | null;
+  address_line_two: string | null;
+  city: string | null;
+  state: string | null;
+  postal_code: string | null;
+  country: string | null;
+  nic: string;
+  status: number;
+  verified: boolean;
+};

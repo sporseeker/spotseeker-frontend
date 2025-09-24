@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://spotseeker.lk
+
+# Sitemaps
+Sitemap: https://spotseeker.lk/sitemap.xml
