@@ -91,6 +91,18 @@ const accumulator: EventAccumulator = {
       },
     ]),
   },
+  [EventType.HALLOWEEN]: {
+    data: [] as IEvent[],
+    name: "HALLOWEEN",
+    cacheKey: JSON.stringify([
+      "/api/events",
+      null,
+      {
+        type: EventType.HALLOWEEN,
+        status: statusTypes,
+      },
+    ]),
+  },
   [EventType.UPCOMING]: {
     data: [] as IEvent[],
     name: "UPCOMING",
