@@ -103,6 +103,18 @@ const accumulator: EventAccumulator = {
       },
     ]),
   },
+  [EventType.ROTARACT]: {
+    data: [] as IEvent[],
+    name: "ROTARACT",
+    cacheKey: JSON.stringify([
+      "/api/events",
+      null,
+      {
+        type: EventType.ROTARACT,
+        status: statusTypes,
+      },
+    ]),
+  },
   [EventType.UPCOMING]: {
     data: [] as IEvent[],
     name: "UPCOMING",

@@ -5,6 +5,7 @@ export enum EventType {
   TAMIL_DJ = "tamil dj",
   CLUB = "club",
   HALLOWEEN = "halloween",
+  ROTARACT = "rotaract",
   UPCOMING = "upcoming",
 }
 export enum PaymentMethod {
