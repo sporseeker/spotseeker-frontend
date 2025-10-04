@@ -43,6 +43,66 @@ const accumulator: EventAccumulator = {
       },
     ]),
   },
+  [EventType.CONCERTS]: {
+    data: [] as IEvent[],
+    name: "CONCERTS",
+    cacheKey: JSON.stringify([
+      "/api/events",
+      null,
+      {
+        type: EventType.CONCERTS,
+        status: statusTypes,
+      },
+    ]),
+  },
+  [EventType.EDM]: {
+    data: [] as IEvent[],
+    name: "EDM",
+    cacheKey: JSON.stringify([
+      "/api/events",
+      null,
+      {
+        type: EventType.EDM,
+        status: statusTypes,
+      },
+    ]),
+  },
+  [EventType.TAMIL_DJ]: {
+    data: [] as IEvent[],
+    name: "TAMIL DJ",
+    cacheKey: JSON.stringify([
+      "/api/events",
+      null,
+      {
+        type: EventType.TAMIL_DJ,
+        status: statusTypes,
+      },
+    ]),
+  },
+  [EventType.CLUB]: {
+    data: [] as IEvent[],
+    name: "CLUB",
+    cacheKey: JSON.stringify([
+      "/api/events",
+      null,
+      {
+        type: EventType.CLUB,
+        status: statusTypes,
+      },
+    ]),
+  },
+  [EventType.HALLOWEEN]: {
+    data: [] as IEvent[],
+    name: "HALLOWEEN",
+    cacheKey: JSON.stringify([
+      "/api/events",
+      null,
+      {
+        type: EventType.HALLOWEEN,
+        status: statusTypes,
+      },
+    ]),
+  },
   [EventType.UPCOMING]: {
     data: [] as IEvent[],
     name: "UPCOMING",
