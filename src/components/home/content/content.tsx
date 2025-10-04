@@ -181,6 +181,13 @@ const ContentSection: FC<IContentSection> = ({ initialEvents }) => {
 
   const eventDetails = `${eventDateRange}${separator}${eventPriceRange}`;
 
+  const formatEventName = (name:string) => {
+    if (typeof name === 'string') {
+      return name.replace(/_/g, ' ');
+    }
+    return name; 
+  };
+
   const filteredEvents = useMemo(() => {
     return initialEvents.data.reduce((accumulator, current) => {
       if (current.status !== "pending") {
@@ -304,7 +311,7 @@ const ContentSection: FC<IContentSection> = ({ initialEvents }) => {
                     .map((event, index) => (
                       <CustomTabsTrigger
                         value={event}
-                        label={filteredEvents[event as EventType].name}
+                        label={formatEventName(filteredEvents[event as EventType].name)}
                         key={index}
                       />
                     ))}
