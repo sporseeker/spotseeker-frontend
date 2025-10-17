@@ -7,6 +7,7 @@ export enum EventType {
   HALLOWEEN = "halloween",
   ROTARACT = "rotaract",
   UPCOMING = "upcoming",
+  AIR_EXPERIENCE = "air experience",
 }
 export enum PaymentMethod {
   CARD = "card",

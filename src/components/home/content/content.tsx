@@ -126,6 +126,18 @@ const accumulator: EventAccumulator = {
       },
     ]),
   },
+  [EventType.AIR_EXPERIENCE]: {
+    data: [] as IEvent[],
+    name: "AIR EXPERIENCE",
+    cacheKey: JSON.stringify([
+      "/api/events",
+      null,
+      {
+        type: EventType.AIR_EXPERIENCE,
+        status: statusTypes,
+      },
+    ]),
+  },
 };
 
 export const CustomTabsTrigger: FC<ICustomTabsTrigger> = ({ label, value }) => {
