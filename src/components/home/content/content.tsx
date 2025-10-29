@@ -138,6 +138,18 @@ const accumulator: EventAccumulator = {
       },
     ]),
   },
+  [EventType.YACHT]: {
+    data: [] as IEvent[],
+    name: "YACHT",
+    cacheKey: JSON.stringify([
+      "/api/events",
+      null,
+      {
+        type: EventType.YACHT,
+        status: statusTypes,
+      },
+    ]),
+  },
 };
 
 export const CustomTabsTrigger: FC<ICustomTabsTrigger> = ({ label, value }) => {
