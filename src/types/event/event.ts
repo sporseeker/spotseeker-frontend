@@ -16,6 +16,9 @@ export interface IEvent {
   thumbnail_img: string;
   banner_img: string;
   featured: boolean;
+  event_facebook: string;
+  event_instagram: string;
+  event_location: string;
   venue: IVenue;
   message: string | null;
   free_seating: boolean;

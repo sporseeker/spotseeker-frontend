@@ -46,16 +46,16 @@ const SingleEvent: FC<{ eventData: IEvent }> = ({ eventData }) => {
   if (typeof window === "undefined" || !event || !event.analytics) return;
 
   if(event && event.analytics && event.analytics.google) {
-                  gaInit(event.analytics.google, {
-                      page_path: window.location.pathname,
-                  });
-                  gaEvent("page_view", { page_path: window.location.pathname });
-              }
-  
-              if(event && event.analytics && event.analytics.facebook) {
-                  fbPixelInit(event.analytics.facebook);
-                  fbPixelEvent("PageView", { page_path: window.location.pathname });
-              }
+    gaInit(event.analytics.google, {
+        page_path: window.location.pathname,
+    });
+    gaEvent("page_view", { page_path: window.location.pathname });
+  }
+
+  if(event && event.analytics && event.analytics.facebook) {
+    fbPixelInit(event.analytics.facebook);
+    fbPixelEvent("PageView", { page_path: window.location.pathname });
+  }
 
 }, [event]);
 
@@ -89,9 +89,61 @@ const SingleEvent: FC<{ eventData: IEvent }> = ({ eventData }) => {
                 <h1 className="text-[24px] font-semibold leading-[30.6px] md:text-[28px] md:leading-[35.7px]">
                   {eventData.name}
                 </h1>
-                <p className="text-[16px] font-normal leading-[20.4px] text-grey-100 opacity-50">
+
+                {/* organizer old design */}
+                {/* <p className="text-[16px] font-normal leading-[20.4px] text-grey-100 opacity-50">
                   by {eventData.organizer}
-                </p>
+                </p> */}
+
+                {/* organizer & social icons new design */}
+                <div className="flex w-full items-center justify-between rounded-lg bg-[#ffffff14] p-[8px] pl-[12px] md:w-auto md:pl-[16px]">
+                  <div className="flex flex-col">
+                    <p className="text-[10px] font-normal leading-[20.4px] text-grey-100 opacity-50">
+                      Organized by
+                    </p>
+                    <p className="text-[12px]">{eventData.organizer}</p>
+                  </div>
+                  <div className="flex items-center gap-[12px]">
+                    {eventData.event_facebook && (
+                      <a
+                        href={
+                          eventData.event_facebook.startsWith('http')
+                            ? eventData.event_facebook
+                            : `https://${eventData.event_facebook}`
+                        }
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="Facebook"
+                      >
+                        <img
+                          src="/icons/facebookWhite.svg"
+                          alt="Facebook"
+                          className="w-[20px] h-[20px] hover:opacity-80 transition-opacity cursor-pointer"
+                        />
+                      </a>
+                    )}
+
+                    {eventData.event_instagram && (
+                      <a
+                        href={
+                          eventData.event_instagram.startsWith('http')
+                            ? eventData.event_instagram
+                            : `https://${eventData.event_instagram}`
+                        }
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="Instagram"
+                      >
+                        <img
+                          src="/icons/instagramWhite.svg"
+                          alt="Instagram"
+                          className="w-[20px] h-[20px] hover:opacity-80 transition-opacity cursor-pointer"
+                        />
+                      </a>
+                    )}
+                  </div>
+                </div>
+
               </div>
               <div className="flex flex-col gap-[16px] md:gap-[20px]">
                 <div className="flex gap-[8px]">
