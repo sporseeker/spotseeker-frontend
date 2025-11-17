@@ -63,9 +63,35 @@ const Footer = () => {
                   <li className="cursor-pointer hover:opacity-75">
                     <Link href={"/privacy"}>Privacy Policy</Link>
                   </li>
-                  <li className="cursor-pointer hover:opacity-75">
-                    <Link href={"/terms"}>Terms & Conditions</Link>
+                  {/* <li className="">
+                    Copilot <Link href={"/terms-copilot"}>Terms</Link> / <Link href={"/privacy-copilot"}>Privacy</Link>
                   </li>
+                  <li className="">
+                    Spotseeker <Link href={"/terms-spotseeker"}>Terms</Link> / <Link href={"/privacy-spotseeker"}>Privacy</Link>
+                  </li> */}
+
+                  <li className="">
+                    Copilot{" "}
+                    <Link href={"/terms-copilot"} className="hover:opacity-75 transition-opacity">
+                      Terms
+                    </Link>{" "}
+                    /{" "}
+                    <Link href={"/privacy-copilot"} className="hover:opacity-75 transition-opacity">
+                      Privacy
+                    </Link>
+                  </li>
+
+                  <li className="">
+                    Spotseeker{" "}
+                    <Link href={"/terms-spotseeker"} className="hover:opacity-75 transition-opacity">
+                      Terms
+                    </Link>{" "}
+                    /{" "}
+                    <Link href={"/privacy-spotseeker"} className="hover:opacity-75 transition-opacity">
+                      Privacy
+                    </Link>
+                  </li>
+
                 </ul>
               </div>
             </div>
