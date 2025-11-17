@@ -113,18 +113,44 @@ const Footer = () => {
                     </p>
                   </Link>
                 </div>
-                <div className="flex items-center gap-x-[8px]">
+                {/* <div className="flex items-center gap-x-[8px]">
                   <ImageWrapper
                     src={"/images/footer/email.svg"}
                     className="h-[26px] w-[26px] lg:h-[32px] lg:w-[32px]"
                     skeleton={false}
                   />
-                  <Link href="mailto:spotseeker.lk@gmail.com">
+                  <Link href="mailto:hello@spotseeker.lk">
                     <p className="text-14 leading-none text-grey-150 hover:opacity-75 lg:text-16">
-                      spotseeker.lk@gmail.com
+                      hello@spotseeker.lk
                     </p>
                   </Link>
+                  <Link href="mailto:hello@spotseeker.lk">
+                    <p className="text-14 leading-none text-grey-150 hover:opacity-75 lg:text-16">
+                      careers@spotseeker.lk
+                    </p>
+                  </Link>
+                </div> */}
+
+                <div className="flex items-start gap-x-[8px]">
+                  <ImageWrapper
+                    src={"/images/footer/email.svg"}
+                    className="h-[26px] w-[26px] lg:h-[32px] lg:w-[32px]"
+                    skeleton={false}
+                  />
+                  <div className="flex flex-col justify-center">
+                    <Link href="mailto:hello@spotseeker.lk">
+                      <p className="text-14 leading-none text-grey-150 hover:opacity-75 lg:text-16">
+                        hello@spotseeker.lk
+                      </p>
+                    </Link>
+                    <Link href="mailto:careers@spotseeker.lk">
+                      <p className="text-14 leading-none text-grey-150 hover:opacity-75 lg:text-16 mt-[4px]">
+                        careers@spotseeker.lk
+                      </p>
+                    </Link>
+                  </div>
                 </div>
+
               </div>
             </div>
             <div className="lg:col-start-1 lg:col-end-4 lg:row-start-4 lg:row-end-5 lg:mt-[30px] lg:flex lg:justify-center xl:col-start-2 xl:col-end-3 xl:row-start-3 xl:row-end-4 xl:mt-0">

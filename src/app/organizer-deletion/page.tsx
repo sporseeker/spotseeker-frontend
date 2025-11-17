@@ -1,4 +1,3 @@
-import { LoginForm } from "@/components/auth/LoginForm";
 import AuthWrapper from "@/components/auth/auth-wrapper";
 import { DeletionForm } from "@/components/deletion-form";
 

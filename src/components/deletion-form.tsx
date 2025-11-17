@@ -1,9 +1,7 @@
 "use client";
 import { Button } from "@/components/ui/button";
-import { signIn } from "next-auth/react";
 import {
   CardContent,
-  CardFooter,
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
@@ -13,11 +11,6 @@ import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { Controller, FormProvider, useForm } from "react-hook-form";
 import { FormTextField } from "../components/auth/form-field";
-import { useRouter, useSearchParams } from "next/navigation";
-import SocialLogin from "../components/auth/social-login";
-import { useState } from "react";
-import { toast } from "@/hooks/use-toast";
-import { AxiosError } from "axios";
 
 const loginFormSchema = z.object({
   email: z.string().email("Invalid email format."),
@@ -30,75 +23,11 @@ const defaultValues: Partial<LoginFormValues> = {
 };
 
 export const DeletionForm = () => {
-  const [loading, setLoading] = useState(false);
-  const router = useRouter();
-  const searchParams = useSearchParams();
-  const event = searchParams?.get("event");
   const form = useForm<LoginFormValues>({
     resolver: zodResolver(loginFormSchema),
     defaultValues,
     mode: "onChange",
   });
-
-  const onSubmit = async (data: LoginFormValues) => {
-    try {
-      setLoading(true);
-      const res = await signIn("credentials", {
-        redirect: false,
-        email: data.email,
-        password: data.password,
-      });
-      if (res?.error) {
-        throw new Error("Authentication failure");
-      }
-      toast({
-        title: "Login Successful",
-        description: "You have successfully logged in.",
-      });
-      setLoading(false);
-      if (event) {
-        router.push(`/event/${event}`);
-      } else {
-        router.push("/");
-      }
-    } catch (error: unknown) {
-      setLoading(false);
-      if (
-        (error as AxiosError).response &&
-        (error as AxiosError)?.response?.status === 422
-      ) {
-        const axiosError = error as AxiosError<{
-          errors: Record<string, string[]>;
-        }>;
-        const errors = axiosError?.response?.data?.errors;
-
-        if (errors) {
-          Object.values(errors).forEach((errorMessages) => {
-            errorMessages.forEach((message) => {
-              toast({
-                title: "Error",
-                description: message,
-                variant: "destructive",
-              });
-            });
-          });
-        } else {
-          toast({
-            title: "Error",
-            description: "There was an issue with the submitted data.",
-            variant: "destructive",
-          });
-        }
-      } else {
-        toast({
-          title: "Error",
-          description:
-            "Authentication failed please check username  and password.",
-          variant: "destructive",
-        });
-      }
-    }
-  };
 
   return (
     <div className="w-full max-w-sm">
@@ -143,7 +72,6 @@ export const DeletionForm = () => {
               </Button> */}
             </div>
             <Button
-              disabled={loading}
               type="submit"
               className={cn(
                 "!m-0 !mt-[24px] min-h-[46px] w-full gap-x-[8px] py-0 !text-white hover:opacity-95",
@@ -152,13 +80,9 @@ export const DeletionForm = () => {
                   : "bg-primary-600/50 hover:bg-primary-600/50",
               )}
             >
-              {loading ? (
-                "Processing..."
-              ) : (
-                <>
-                  Delete Account <ChevronRight className="h-[16px] w-[16px]" />
-                </>
-              )}
+              <>
+                Delete Account <ChevronRight className="h-[16px] w-[16px]" />
+              </>
             </Button>
           </form>
         </FormProvider>

@@ -26,7 +26,7 @@ const PrivacyPolicyPage = () => {
             </p>
             <p>
               If you have any suggestions or complaints you may contact us at
-              (spotseeker.lk@gmail.com)
+              (hello@spotseeker.lk)
             </p>
           </div>
           <hr />
@@ -166,7 +166,7 @@ const PrivacyPolicyPage = () => {
               information, request access to or correction of your personal
               data, or if you have any questions, comments, or concerns, please
               feel free to contact us. You can reach us at
-              spotseeker.lk@gmail.com for assistance with any technical matters
+              hello@spotseeker.lk for assistance with any technical matters
               or inquiries.
             </p>
           </div>
@@ -176,7 +176,7 @@ const PrivacyPolicyPage = () => {
             <p>
               At Spotseeker.lk, we respect your privacy and your right to manage
               your data. If you wish to delete your account and associated
-              personal data, please email us at [spotseeker.lk@gmail.com] with
+              personal data, please email us at [hello@spotseeker.lk] with
               the subject &quot;Data Deletion Request&quot; and include your
               registered email & phone number.
               <br /> Our team will process your request within 2 to 3 business
