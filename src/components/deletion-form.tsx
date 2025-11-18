@@ -14,12 +14,12 @@ import { FormTextField } from "../components/auth/form-field";
 
 const loginFormSchema = z.object({
   email: z.string().email("Invalid email format."),
-  password: z.string().min(8, "Password must be at least 8 characters."),
+  reason: z.string().min(8, "Reason must be at least 8 characters."),
 });
 type LoginFormValues = z.infer<typeof loginFormSchema>;
 const defaultValues: Partial<LoginFormValues> = {
   email: "",
-  password: "",
+  reason: "",
 };
 
 export const DeletionForm = () => {
@@ -52,7 +52,7 @@ export const DeletionForm = () => {
                 )}
               />
               <Controller
-                name="password"
+                name="reason"
                 control={form.control}
                 render={({ field }) => (
                   <FormTextField

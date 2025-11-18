@@ -1,5 +1,6 @@
 import { ContentAreaLayout } from "@/components/content-area-layout";
 import React from "react";
+import Link from "next/link";
 
 const PrivacyPolicy = () => {
   return (
@@ -124,6 +125,18 @@ const PrivacyPolicy = () => {
               Spotseeker Copilot reserves the right to update this Privacy Policy at any time.
               Organizers will be notified of material changes via the application or registered email.
               Continued use of the application constitutes acceptance of any updated policy.
+            </p>
+          </div>
+
+          <hr />
+
+          {/* 9. Deletion */}
+          <div>
+            <h2>9.⁠ ⁠Organizer Account Deletion Requests</h2>
+            <p>
+              Organizers registered on the Spotseeker Copilot application have the right to request 
+              the deletion of their account and associated data. You may submit a direct deletion 
+              request by clicking the following link: <Link href="/organizer-deletion" className="hover:opacity-75 transition-opacity font-bold">Request Organizer Account Deletion</Link>
             </p>
           </div>
 
