@@ -1,28 +1,29 @@
-import HomeBanner from "@/components/home/banner/banner";
-import ContentSection from "@/components/home/content/content";
+import React from "react";
 
-export const revalidate = 10;
-
-export default async function Home() {
-  const initialEvents = await fetchEvents();
+const ErrorPage = () => {
   return (
-    <>
-      <HomeBanner />
-      <ContentSection initialEvents={initialEvents} />
-    </>
+    <div className="grid h-screen place-content-center bg-gray-900">
+      <div className="text-center">
+        <h1 className="mb-[20px] text-9xl font-black text-gray-700">Oops! </h1>
+
+        <p className="text-2xl font-bold tracking-tight text-white sm:text-4xl">
+          We are on maintainance, We'll be back soon
+        </p>
+
+
+        <p className="mt-4 text-gray-400">
+          We apologize for the inconvenience.
+        </p>
+
+        <a
+          href="/"
+          className="mt-6 inline-block rounded bg-primary-600 px-5 py-3 text-sm font-medium text-white hover:bg-primary-600 hover:opacity-75 focus:outline-none focus:ring"
+        >
+          Go Back Home
+        </a>
+      </div>
+    </div>
   );
-}
-async function fetchEvents() {
-  const statusParams = ["soldout", "closed", "postponed", "ongoing", "pending"];
-  const params =
-    statusParams.length > 0
-      ? `?${statusParams.map((status) => `status[]=${status}`).join("&")}`
-      : "";
-  const response = await fetch(
-    `${process.env.NEXT_PUBLIC_BACKEND_URL}/api/events${params}`,
-    {
-      next: { revalidate: 10 },
-    },
-  );
-  return response.json();
-}
+};
+
+export default ErrorPage;

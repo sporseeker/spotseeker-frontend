@@ -7,8 +7,9 @@ const ErrorPage = () => {
         <h1 className="mb-[20px] text-9xl font-black text-gray-700">Oops! </h1>
 
         <p className="text-2xl font-bold tracking-tight text-white sm:text-4xl">
-          An error occurred on the client!
+          We are on maintainance, We'll be back soon
         </p>
+
 
         <p className="mt-4 text-gray-400">
           We apologize for the inconvenience.
