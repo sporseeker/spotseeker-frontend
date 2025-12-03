@@ -30,8 +30,10 @@ const Description = dynamic(() => import("./description"), {
 
 const SingleEvent: FC<{ eventData: IEvent }> = ({ eventData }) => {
   const router = useRouter();
-
   const dispatch = useAppDispatch();
+
+  const [currentSlide, setCurrentSlide] = useState(0);
+
   const ticketPackages = useAppSelector(
     (state: RootState) => state.event.ticketPackages,
   );
@@ -72,18 +74,81 @@ const SingleEvent: FC<{ eventData: IEvent }> = ({ eventData }) => {
     [eventData.ticket_packages],
   );
 
+  const images = useMemo(() => {
+    return [eventData.banner_img, eventData.thumbnail_img].filter(Boolean);
+  }, [eventData.banner_img, eventData.thumbnail_img]);
+
+  useEffect(() => {
+    if (images.length <= 1) return;
+
+    const slideInterval = setInterval(() => {
+      setCurrentSlide((prev) => (prev === images.length - 1 ? 0 : prev + 1));
+    }, 6000);
+
+    return () => clearInterval(slideInterval);
+  }, [images.length]);
+
   return (
     <section className="single-event pt-[100px] lg:pt-[130px]">
       <ContentAreaLayout className="relative flex flex-col gap-[40px] pb-[112px] md:gap-[80px] lg:flex-row">
         <div className="bg-gradient-type-one-mobile lg:bg-gradient-type-one absolute z-[-1]"></div>
         <div className="flex max-w-[700px] flex-col gap-[24px] rounded-2xl border-[1px] border-solid border-[#ffffff1f] bg-[linear-gradient(135deg,rgba(25,33,69,0.9)_50%,rgba(32,14,22,0.9)_100%)] p-[16px] md:flex-[35] md:gap-[28px] lg:p-[28px]">
           <div className="flex flex-col gap-[16px] md:flex-row md:gap-[32px]">
-            <ImageWrapper
+            
+            {/* banner image old design */}
+            {/* <ImageWrapper
               src={eventData.banner_img}
               className="aspect-square w-full rounded-lg border-[1px] border-solid border-grey-550 md:w-[300px] md:min-w-[300px]"
               imageElementClassName="object-cover"
               skeleton={false}
-            />
+            /> */}
+
+            <div className="flex flex-col gap-[12px] md:w-[300px] md:min-w-[300px]">
+              {images.length > 0 ? (
+                <div className="relative aspect-square w-full overflow-hidden rounded-lg border-[1px] border-solid border-grey-550">
+                  <div
+                    className="flex h-full w-full transition-transform duration-700 ease-in-out"
+                    style={{
+                      transform: `translateX(-${currentSlide * 100}%)`,
+                    }}
+                  >
+                    {images.map((img, index) => (
+                      <div
+                        key={index}
+                        className="h-full w-full flex-shrink-0"
+                      >
+                        <ImageWrapper
+                          src={img as string}
+                          className="h-full w-full"
+                          imageElementClassName="object-cover h-full w-full"
+                          skeleton={false}
+                        />
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              ) : (
+    
+                <div className="aspect-square w-full rounded-lg bg-white/10" />
+              )}
+
+              {images.length > 1 && (
+                <div className="flex justify-center gap-1.5">
+                  {images.map((_, index) => (
+                    <div
+                      key={index}
+                      className={cn(
+                        "h-1.5 w-1.5 rounded-full transition-all duration-300",
+                        index === currentSlide
+                          ? "w-3 bg-white"
+                          : "bg-white/50",
+                      )}
+                    />
+                  ))}
+                </div>
+              )}
+            </div>
+
             <div className="flex flex-col gap-[24px] md:gap-[22px]">
               <div className="flex flex-col gap-[0px] md:gap-[4px]">
                 <h1 className="text-[24px] font-semibold leading-[30.6px] md:text-[28px] md:leading-[35.7px]">
