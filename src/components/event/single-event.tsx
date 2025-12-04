@@ -318,7 +318,10 @@ const SingleEvent: FC<{ eventData: IEvent }> = ({ eventData }) => {
             </div>
           )}
           <div className="flex flex-col gap-[8px]">
-            {eventData.ticket_packages.map((ticket) => {
+            {/* {eventData.ticket_packages.map((ticket) => { */}
+            {eventData.ticket_packages
+              .filter((ticket) => ticket.status !== "PENDING_APPROVAL")
+              .map((ticket) => {
               return (
                 <TicketTierCard
                   key={ticket.id}

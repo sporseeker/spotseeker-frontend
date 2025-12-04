@@ -81,6 +81,7 @@ export interface ITicketPackage {
   free_seating: boolean;
   promo: boolean;
   promo_code?: string;
+  status: string;
   promo_auto_apply?: boolean;
   max_tickets_can_buy: number;
 }
