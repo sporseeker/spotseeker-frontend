@@ -15,6 +15,7 @@ export interface IEvent {
   status: string;
   thumbnail_img: string;
   banner_img: string;
+  event_flyer_file: string;
   featured: boolean;
   event_facebook: string;
   event_instagram: string;
@@ -81,6 +82,7 @@ export interface ITicketPackage {
   free_seating: boolean;
   promo: boolean;
   promo_code?: string;
+  status: string;
   promo_auto_apply?: boolean;
   max_tickets_can_buy: number;
 }
