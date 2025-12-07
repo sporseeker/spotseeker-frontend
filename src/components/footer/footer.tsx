@@ -60,9 +60,9 @@ const Footer = () => {
                   <li className="cursor-pointer hover:opacity-75">
                     <Link href={"/about-us  "}>About Us</Link>
                   </li>
-                  <li className="cursor-pointer hover:opacity-75">
+                  {/* <li className="cursor-pointer hover:opacity-75">
                     <Link href={"/privacy"}>Privacy Policy</Link>
-                  </li>
+                  </li> */}
                   {/* <li className="">
                     Copilot <Link href={"/terms-copilot"}>Terms</Link> / <Link href={"/privacy-copilot"}>Privacy</Link>
                   </li>
@@ -198,3 +198,4 @@ const Footer = () => {
 };
 
 export default Footer;
+
