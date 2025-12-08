@@ -122,11 +122,23 @@ const EventCard: FC<IEventCard> = ({
         )}
       >
         {featured && <FeaturedBadge />}
-        <div className="absolute right-0 top-0 z-[10] flex h-[44px] w-[48px] flex-col items-center justify-center rounded-bl-[12px] rounded-tr-[11px] bg-primary-600 text-14 font-medium leading-none text-white lg:h-[64px] lg:w-[56px] lg:text-16">
+        {/* <div className="absolute right-0 top-0 z-[10] flex h-[44px] w-[48px] flex-col items-center justify-center rounded-bl-[12px] rounded-tr-[11px] bg-primary-600 text-14 font-medium leading-none text-white lg:h-[64px] lg:w-[56px] lg:text-16">
           <span className="mb-[4px] lg:mb-[8px]">
             {format(eventDate, "MMM")}
           </span>
           <span>{format(eventDate, "d")}</span>
+        </div> */}
+        <div className="absolute right-0 top-0 z-[10] flex h-[44px] w-[48px] flex-col items-center justify-center rounded-bl-[12px] rounded-tr-[11px] bg-primary-600 text-14 font-medium leading-none text-white lg:h-[64px] lg:w-[56px] lg:text-16">
+          {status === "postponed" ? (
+            <span className="text-center leading-tight">TBA</span>
+          ) : (
+            <>
+              <span className="mb-[4px] lg:mb-[8px]">
+                {format(eventDate, "MMM")}
+              </span>
+              <span>{format(eventDate, "d")}</span>
+            </>
+          )}
         </div>
         <div className="relative h-[160px] sm:h-[240px] md:h-[215px] lg:md:h-[284px] xl:md:h-[280px]">
           <ImageWrapper
