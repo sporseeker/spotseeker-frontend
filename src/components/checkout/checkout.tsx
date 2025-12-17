@@ -61,8 +61,8 @@ export const formSchema = z.object({
   email: z.string().min(2, {
     message: "must be at least 2 characters.",
   }),
-  phone: z.string().regex(/^[0]{1}[7]{1}[01245678]{1}[0-9]{7}$/, {
-    message: "Phone number must be in the format 0771234567 o4761234567",
+  phone: z.string().regex(/^(?:\+?[1-9]\d{1,14}|(?:0|94|\+94)?7[0-8]\d{7})$/, {
+    message: "Phone number must be a valid global number or a Sri Lankan mobile number",
   }),
   nic: z.string().min(2, {
     message: "must be at least 2 characters.",
