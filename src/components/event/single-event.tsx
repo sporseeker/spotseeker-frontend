@@ -511,7 +511,7 @@ const SingleEvent: FC<{ eventData: IEvent }> = ({ eventData }) => {
                     <p className="text-[12px]">{eventData.organizer}</p>
                   </div>
                   <div className="flex items-center gap-[12px]">
-                    {eventData.event_facebook && (
+                    {eventData.event_facebook && eventData.event_facebook !== "null" && (
                       <a
                         href={
                           eventData.event_facebook.startsWith('http')
@@ -530,7 +530,7 @@ const SingleEvent: FC<{ eventData: IEvent }> = ({ eventData }) => {
                       </a>
                     )}
 
-                    {eventData.event_instagram && (
+                    {eventData.event_instagram && eventData.event_instagram !== "null" && (
                       <a
                         href={
                           eventData.event_instagram.startsWith('http')
