@@ -109,7 +109,7 @@ export function AutoComplete({
               >
                 <Input
                   placeholder={placeholder}
-                  className="h-[46px] w-full !rounded-none border-none !bg-black/40 !text-14 !text-grey-100 placeholder:!text-14 hover:!ring-0 focus:!ring-0 group-[.not-home]:!h-[42px] lg:h-[56px] lg:!text-18 lg:placeholder:!text-18 group-[.not-home]:lg:!text-14 group-[.not-home]:lg:placeholder:!text-14"
+                  className="h-[46px] w-full !rounded-none border-none !bg-black/40 !text-[16px] !text-grey-100 placeholder:!text-[16px] hover:!ring-0 focus:!ring-0 group-[.not-home]:!h-[42px] lg:h-[56px] lg:!text-18 lg:placeholder:!text-18 group-[.not-home]:lg:!text-14 group-[.not-home]:lg:placeholder:!text-14"
                 />
               </CommandPrimitive.Input>
 
